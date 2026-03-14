@@ -40,9 +40,9 @@ export default function About() {
       items: about.work.experiences.map((experience) => experience.company),
     },
     {
-      title: about.studies.title,
-      display: about.studies.display,
-      items: about.studies.institutions.map((institution) => institution.name),
+      title: about.Education.title,
+      display: about.Education.display,
+      items: about.Education.institutions.map((institution) => institution.name),
     },
     {
       title: about.technical.title,
@@ -147,7 +147,7 @@ export default function About() {
             </Heading>
             <Text
               className={styles.textAlign}
-              variant="display-default-xs"
+              variant="heading-default-xl"
               onBackground="neutral-weak"
             >
               {person.role}
@@ -261,13 +261,13 @@ export default function About() {
             </>
           )}
 
-          {about.studies.display && (
+          {about.Education.display && (
             <>
-              <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
-                {about.studies.title}
+              <Heading as="h2" id={about.Education.title} variant="display-strong-s" marginBottom="m">
+                {about.Education.title}
               </Heading>
               <Column fillWidth gap="l" marginBottom="40">
-                {about.studies.institutions.map((institution, index) => (
+                {about.Education.institutions.map((institution, index) => (
                   <Column key={`${institution.name}-${index}`} fillWidth gap="4">
                     <Text id={institution.name} variant="heading-strong-l">
                       {institution.name}

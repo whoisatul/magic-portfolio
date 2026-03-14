@@ -166,7 +166,7 @@ export interface About extends BasePageConfig {
     }>;
   };
   /** Studies/education section */
-  studies: {
+  Education: {
     /** Whether to display studies section */
     display: boolean;
     /** Title for the studies section */
