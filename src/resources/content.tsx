@@ -6,7 +6,7 @@ const person: Person = {
   lastName: "Kumar",
   name: `Hrikshesh Kumar`,
   role: "AI Engineer & Full Stack Developer",
-  avatar: "/images/avatar.jpg",
+  avatar: "/images/avatar.png",
   email: "atulhere7@gmail.com",
   location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Hindi"], // optional: Leave the array empty if you don't want to display languages
@@ -56,7 +56,7 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/avatar.png",
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
@@ -65,7 +65,7 @@ const home: Home = {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Neurovision AI</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
@@ -114,18 +114,19 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "SHS AI Solutions",
+        timeframe: "Dec 2025 - Feb 2026",
+        role: "Full stack developer",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+         <>
+    Architected and developed the official website for SHS AI Solutions using Next.js, delivering a scalable full-stack application with &lt;2s page load time and 10k+ monthly visitor capacity.
+  </>,
+  <>
+  Deployed production infrastructure with secure environment configuration, reducing deployment time from ~20 minutes to under 5 minute.
+  </>,
+  <>
+    Optimized SEO, accessibility, and performance, achieving 80+ Lighthouse scores and improving load performance by ~40%.
+  </>,
         ],
       },
     ],
@@ -145,21 +146,91 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Artificial Intelligence & Machine Learning",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Designing and training machine learning and deep learning models for computer vision, data analysis, and intelligent prediction systems.</>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "Python",
+            icon: "",
+          }, {
+            name: "Numpy",
+            icon: "",
+          }, {
+            name: "Pandas",
+            icon: "",
+          }, {
+            name: "Scikit-learn",
+            icon: "",
+          }, {
+            name: "TensorFlow",
+            icon: "",
+          }, {
+            name: "PyTorch",
+            icon: "",
+          }, {
+            name: "OpenCV",
+            icon: "",
+          },{
+            name: "Keras",
+            icon: "",
+          },{
+            name: "Matplotlib",
+            icon: "",
+          },{
+            name: "Seaborn",
+            icon: "",
           },
         ],
       },
       {
-        title: "Next.js",
+        title: "Generative AI & LLM Engineering",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Building intelligent applications powered by LLMs, RAG pipelines, vector databases, and agentic workflows for real-world AI systems.</>
+        ),
+        tags: [
+          {
+            name: "LangChain",
+            icon: "",
+          },
+          {
+            name: "LangGraph",
+            icon: "",
+          },
+          {
+            name: "LangSmith",
+            icon: "",
+          },{
+            name: "HuggingFace",
+            icon: "",
+          },{
+            name: "RAG",
+            icon: "",
+          },{
+            name: "Pinecone",
+            icon: "",
+          },{
+            name: "Chroma",
+            icon: "",
+          },{
+            name: "LlamaIndex",
+            icon: "",
+          },{
+            name: "MCP",
+            icon: "",
+          },{
+            name: "FastAPI",
+            icon: "",
+          },{
+            name: "Prompt Engineering",
+            icon: "",
+          },
+        ],
+      },{
+        title: "Next.js Developer",
+        description: (
+          <>Building next gen apps with Next.js.</>
         ),
         tags: [
           {
@@ -171,8 +242,35 @@ const about: About = {
             icon: "nextjs",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "Node.js",
+            icon: "",
+          },
+          {
+            name: "AWS",
+            icon: "",
+          },
+        ],
+      },{
+        title: "MERN Stack Developer",
+        description: (
+          <>Building full stack apps using MongoDB, Express.js, React, and Node.js with REST APIs and modern JavaScript.</>
+        ),
+        tags: [
+          {
+            name: "Javascript",
+            icon: "",
+          },
+          {
+            name: "MongoDB",
+            icon: "",
+          },
+          {
+            name: "Express.js",
+            icon: "",
+          },
+          {
+            name: "React.js",
+            icon: "",
           },
         ],
       },
@@ -198,55 +296,6 @@ const work: Work = {
   // All projects will be listed on the /home and /work routes
 };
 
-const gallery: Gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
-};
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+
+export { person, social, newsletter, home, about, blog, work, };
