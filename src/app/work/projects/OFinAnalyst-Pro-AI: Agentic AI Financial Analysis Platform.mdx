@@ -1,0 +1,87 @@
+---
+title: "AI-FinAnalyst-Pro: Agentic AI Financial Analysis Platform"
+publishedAt: "2024-04-01"
+summary: "An AI-powered financial analyst that combines real-time market data, news scraping, and multi-agent reasoning to generate comprehensive stock analysis and portfolio insights."
+images:
+  - "/images/projects/project-01/w3a.png"
+  - "/images/projects/project-01/w3b.png"
+team:
+  - name: "Hrikshesh Kumar"
+    role: "AIML Engineer & Full Stack Developer"
+    avatar: "/images/avatar.png"
+    linkedIn: "https://www.linkedin.com/in/hrikshesh-kumar/"
+link: "https://ai-fin-analyst-pro.vercel.app"
+---
+
+## Overview
+
+AI-FinAnalyst-Pro is an **AI-driven financial analysis platform** designed to help investors interpret complex financial data and make informed investment decisions. The system acts as a **virtual financial analyst**, combining real-time market data, financial news, and AI-powered reasoning to generate structured insights for any given stock ticker.
+
+The application integrates **agent-based workflows using LangGraph**, enabling multiple AI agents to collaborate in analyzing market conditions, assessing risk, and generating investment insights. By combining deterministic financial data with large language models, the platform produces **data-grounded financial reports instead of speculative AI responses**.
+
+Built as a full-stack application using **Next.js, PostgreSQL, and modern AI tooling**, the platform provides an interactive dashboard where users can analyze stocks, track portfolios, and generate professional financial reports.
+
+## Key Features
+
+- **AI-Powered Financial Analysis**  
+  Generates structured investment insights by combining real-time market data with AI reasoning models.
+
+- **Multi-Agent AI Workflow**  
+  Uses LangGraph to orchestrate multiple AI agents that analyze financial metrics, evaluate news sentiment, and assess market risks.
+
+- **Real-Time Market Data Integration**  
+  Fetches live stock information including price movements, P/E ratios, beta values, and historical performance.
+
+- **Portfolio Tracking Dashboard**  
+  Allows users to manage their personal stock portfolio and track performance through interactive charts.
+
+- **Automated Financial Report Generation**  
+  Produces downloadable PDF reports summarizing market insights and portfolio analysis.
+
+## Technologies Used
+
+### Frontend
+- **Next.js & React** – Full-stack application framework  
+- **Tailwind CSS & Framer Motion** – Responsive styling and UI animations  
+- **Chart.js** – Interactive financial charts and data visualization
+
+### Backend & AI
+- **Prisma & PostgreSQL** – Database ORM and persistent data storage  
+- **LangChain & LangGraph** – Multi-agent AI orchestration and workflow management  
+- **Hugging Face Inference API** – LLM processing using models such as `deepseek-ai/DeepSeek-R1`  
+- **Yahoo Finance API (yahoo-finance2)** – Real-time financial market data  
+- **Duck-Duck-Scrape** – Web scraping for the latest financial news  
+- **pdf-lib** – Automated PDF report generation
+
+## AI Architecture
+
+The platform utilizes an **agent-based AI architecture powered by LangGraph** to orchestrate multiple reasoning components.
+
+- **News Scout Agent** – Scrapes and aggregates recent financial news related to the selected ticker.  
+- **Financial Analyst Agent** – Interprets numerical data and news context to generate structured analysis.  
+- **Risk Manager Agent** – Evaluates volatility, potential downside risk, and market stability.
+
+The agents operate within a **state graph pipeline**, where outputs from one agent become inputs for the next stage, enabling layered reasoning and structured financial insights.
+
+## Project Workflow
+
+1. The user enters a stock ticker on the web interface.  
+2. The backend retrieves real-time financial data using the Yahoo Finance API.  
+3. The LangGraph pipeline activates multiple AI agents to analyze market data and news.  
+4. The analysis results are stored in PostgreSQL through Prisma.  
+5. The frontend renders insights, charts, and reports dynamically.  
+6. Users can track portfolio holdings and generate downloadable PDF reports.
+
+## Challenges and Learnings
+
+One of the key challenges was ensuring that **AI-generated financial insights remained grounded in real-time data**. This required designing a workflow where language models only interpret data retrieved from trusted sources rather than generating speculative outputs.
+
+Another challenge involved building **multi-agent AI pipelines** that coordinate multiple reasoning steps while maintaining consistent context across agents. LangGraph proved particularly effective in orchestrating these workflows through state-based pipelines.
+
+This project also provided hands-on experience integrating **LLM-based reasoning with real-world APIs and financial datasets**, bridging the gap between AI research and production-grade applications.
+
+## Outcome
+
+AI-FinAnalyst-Pro demonstrates how **agent-based AI systems can enhance financial decision-making** by combining structured market data with contextual intelligence from news and analytics.
+
+The platform highlights expertise in **AI orchestration, full-stack development, real-time data pipelines, and interactive financial visualization**, showcasing how modern AI systems can transform complex financial data into actionable insights.

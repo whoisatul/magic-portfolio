@@ -1,0 +1,89 @@
+---
+title: "Time Series Forecasting with LSTM Neural Networks"
+publishedAt: "2024-04-01"
+summary: "A deep learning project demonstrating time series forecasting using LSTM networks to predict future airline passenger trends from historical data."
+images:
+  - "/images/projects/project-01/w4a.png"
+team:
+  - name: "Hrikshesh Kumar"
+    role: "AIML Engineer & Full Stack Developer"
+    avatar: "/images/avatar.png"
+    linkedIn: "https://www.linkedin.com/in/hrikshesh-kumar/"
+link: "https://github.com/whoisatul/Time-series-forecast-using-LSTM.git"
+---
+
+## Overview
+
+This project demonstrates **time series forecasting using Long Short-Term Memory (LSTM) neural networks**, a specialized architecture designed for sequential data. The model learns patterns from historical airline passenger data and predicts future passenger counts based on past observations.
+
+Time series forecasting is widely used in industries such as finance, transportation, and demand planning. Traditional regression models often struggle with temporal dependencies, but LSTM networks are designed to capture **long-term patterns and sequential relationships**, making them well suited for forecasting tasks.
+
+This project walks through the complete pipeline of building a forecasting model—from **data preprocessing and sequence generation to model training, evaluation, and visualization of predictions**.
+
+## Key Features
+
+- **Sequential Time Series Modeling**  
+  Utilizes LSTM neural networks capable of learning long-term dependencies in temporal data.
+
+- **Data Preprocessing Pipeline**  
+  Includes normalization, time window generation, and reshaping of sequences to prepare data for deep learning models.
+
+- **Prediction and Evaluation**  
+  Forecasts future passenger counts and evaluates performance using regression metrics such as RMSE.
+
+- **Visualization of Model Performance**  
+  Graphical comparison of actual vs predicted values to illustrate forecasting accuracy.
+
+- **End-to-End Deep Learning Workflow**  
+  Covers the complete lifecycle of a machine learning project including preprocessing, model training, and performance analysis.
+
+## Technologies Used
+
+- **Python** – Core programming language for model development  
+- **NumPy & Pandas** – Data preprocessing and manipulation  
+- **Matplotlib** – Data visualization and result analysis  
+- **Scikit-learn** – Data normalization and evaluation metrics  
+- **TensorFlow / Keras** – Deep learning framework used to implement the LSTM architecture
+
+## Dataset
+
+The model is trained on the **Airline Passenger Dataset**, a widely used benchmark dataset for time series forecasting.
+
+- Contains **monthly airline passenger counts**
+- Represents a **univariate time series dataset**
+- Useful for studying long-term seasonal patterns and growth trends
+
+## Project Workflow
+
+1. Load and preprocess the airline passenger dataset.  
+2. Normalize the data using **Min-Max scaling** to stabilize training.  
+3. Split the dataset into training and testing sets.  
+4. Convert time series data into a **supervised learning format** using sliding windows.  
+5. Reshape sequences to match the input structure required for LSTM networks.  
+6. Train the LSTM model on historical data.  
+7. Generate predictions on unseen test samples.  
+8. Evaluate performance using **Root Mean Squared Error (RMSE)**.  
+9. Visualize actual vs predicted passenger counts.
+
+## Model Architecture
+
+The forecasting model uses a lightweight LSTM architecture designed for learning sequential dependencies:
+
+- **LSTM Layer:** 4 memory units to capture temporal patterns  
+- **Dense Output Layer:** Single neuron predicting the next value in the sequence  
+- **Loss Function:** Mean Squared Error (MSE)  
+- **Optimizer:** Adam optimizer for efficient training
+
+## Challenges and Learnings
+
+One of the key challenges in time series forecasting is converting sequential data into a format suitable for neural networks. This required implementing **sliding windows that transform time series observations into supervised learning sequences**.
+
+Another important lesson involved the **importance of normalization**, as neural networks are sensitive to scale differences in input data. Applying Min-Max scaling significantly improved training stability and prediction accuracy.
+
+This project also provided deeper insights into **sequence modeling, temporal dependencies, and evaluation strategies for forecasting problems**.
+
+## Outcome
+
+The trained LSTM model successfully captures the underlying trend and seasonal patterns in the airline passenger dataset. The predictions closely follow the actual passenger growth curve, demonstrating the effectiveness of LSTM networks for time series forecasting tasks.
+
+This project highlights practical experience with **deep learning-based forecasting models, sequential data processing, and regression-based model evaluation**, forming a strong foundation for more advanced time series applications.

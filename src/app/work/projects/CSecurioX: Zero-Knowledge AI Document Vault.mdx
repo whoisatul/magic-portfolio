@@ -1,0 +1,65 @@
+---
+title: "SecurioX: Zero-Knowledge AI Document Vault"
+publishedAt: "2024-04-01"
+summary: "A privacy-first AI document vault that combines end-to-end encryption with Retrieval-Augmented Generation, allowing users to securely chat with their private documents without exposing raw data."
+images:
+  - "/images/projects/project-01/w1a.png"
+  - "/images/projects/project-01/w1b.png"
+team:
+  - name: "Hrikshesh Kumar"
+    role: "AIML Engineer & Full Stack Developer"
+    avatar: "/images/avatar.png"
+    linkedIn: "https://www.linkedin.com/in/hrikshesh-kumar/"
+link: "https://securiox-ai.vercel.app"
+---
+
+## Overview
+
+SecurioX is a **privacy-first AI document vault** designed to bridge the gap between **secure cloud storage and intelligent AI document analysis**. Traditional AI tools require users to upload raw documents to external systems, sacrificing privacy for convenience. SecurioX solves this by implementing a **zero-knowledge architecture** where files are encrypted client-side before being uploaded, ensuring that even the server cannot access the original content.
+
+The platform combines **end-to-end encryption with Retrieval-Augmented Generation (RAG)** to allow users to securely interact with their documents through natural language queries. Users can upload files such as PDFs or DOCX documents, and the system extracts semantic information, generates embeddings, and enables intelligent conversations with those documents without compromising data security.
+
+## Key Features
+
+- **Zero-Knowledge File Storage**  
+  Files are encrypted on the client using AES before upload. The AES key itself is encrypted using the user's RSA public key, ensuring the server never sees the original content.
+
+- **AI-Powered Document Chat (RAG)**  
+  The system extracts text from uploaded documents, generates embeddings, and stores them in a vector database to enable semantic search and context-aware AI responses.
+
+- **Hybrid Cryptography Architecture**  
+  Combines **RSA asymmetric encryption with AES symmetric encryption** to provide strong security while maintaining performance for large file uploads.
+
+- **Multi-Factor Authentication (MFA)**  
+  Implements **TOTP-based authentication** to protect user accounts against brute-force attacks and credential theft.
+
+- **Semantic Retrieval Engine**  
+  Uses vector similarity search to retrieve only the most relevant document chunks before sending context to the LLM for generation.
+
+## Technologies Used
+
+- **Next.js & React** – Full-stack application architecture with dynamic UI rendering  
+- **PostgreSQL & Prisma** – Type-safe relational database and ORM  
+- **Tailwind CSS** – Responsive UI styling  
+- **NextAuth.js** – Authentication and session management  
+- **LangChain** – Orchestrating the RAG pipeline and document chunking  
+- **Pinecone** – Vector database for semantic search  
+- **Groq AI Inference** – High-performance LLM inference using models like `gpt-oss-120b` and `llama-3.3-70b`  
+- **Gemini Embeddings** – Generating semantic embeddings for document retrieval  
+- **Cloudinary** – Storage for encrypted document blobs  
+- **pdfjs-dist & Mammoth** – Extracting text from PDFs and Word documents  
+- **crypto-js, bcryptjs, jsencrypt** – Implementing hybrid encryption and password security
+
+## Challenges and Learnings
+
+One of the biggest challenges was building a **secure end-to-end encrypted workflow while maintaining AI usability**. Managing cryptographic key flows between the browser and server required careful architecture to ensure private keys never leaked or became accessible outside the user's control.
+
+Another challenge was designing an efficient **RAG pipeline** that could process multiple document types while maintaining high retrieval accuracy. Optimizing chunking strategies and embedding workflows was critical to ensure that the AI assistant retrieved the correct contextual information from documents.
+
+This project also required solving complex **state management problems for encryption keys, file metadata, and AI chat sessions** within a full-stack Next.js environment.
+
+## Outcome
+
+SecurioX demonstrates how **privacy and AI intelligence can coexist** without compromising security. By combining **client-side cryptography, semantic vector search, and modern LLM pipelines**, the system enables users to securely analyze and interact with their personal documents.
+
+The platform showcases expertise in **AI engineering, secure system design, and full-stack development**, highlighting how modern web technologies can be combined with advanced AI infrastructure to build privacy-preserving intelligent applications.
