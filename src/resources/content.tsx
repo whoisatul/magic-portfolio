@@ -102,7 +102,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-       Hrikshesh is a Next.js full-stack developer and AI engineer 
+       Hrikshesh is a AI engineer and Next.js full-stack developer 
        crafting intelligent, scalable applications powered by LLMs, 
        RAG systems, vector databases, and AI agent workflows that turn complex 
        AI capabilities into real-world products.
