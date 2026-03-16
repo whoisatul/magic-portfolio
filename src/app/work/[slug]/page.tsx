@@ -21,6 +21,8 @@ import { ScrollToHash, CustomMDX } from "@/components";
 import { Metadata } from "next";
 import { Projects } from "@/components/work/Projects";
 
+export const dynamicParams = false;
+
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const posts = getPosts(["src", "app", "work", "projects"]);
   return posts.map((post) => ({
@@ -76,7 +78,7 @@ export default async function Project({
   return (
     <Column as="section" maxWidth="m" horizontal="center" gap="l">
       <Schema
-        as="blogPosting"
+        as="article"
         baseURL={baseURL}
         path={`${work.path}/${post.slug}`}
         title={post.metadata.title}

@@ -1,4 +1,4 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -72,7 +72,7 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/neurovisionai-deep-learning-brain-tumor-segmentation",
   },
   subline: (
     <>
@@ -235,7 +235,7 @@ const about: About = {
         tags: [
           {
             name: "TypeScript",
-            icon: "typescript",
+            icon: "",
           },
           {
             name: "Next.js",
@@ -249,6 +249,10 @@ const about: About = {
             name: "AWS",
             icon: "",
           },
+          {
+            name: "Supabase",
+            icon: "",
+          }
         ],
       },{
         title: "MERN Stack Developer",
@@ -278,14 +282,7 @@ const about: About = {
   },
 };
 
-const blog: Blog = {
-  path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
-};
+
 
 const work: Work = {
   path: "/work",
@@ -298,4 +295,4 @@ const work: Work = {
 
 
 
-export { person, social, newsletter, home, about, blog, work, };
+export { person, social, newsletter, home, about, work, };

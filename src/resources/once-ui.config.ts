@@ -20,7 +20,7 @@ const routes: RoutesConfig = {
   "/": true,
   "/about": true,
   "/work": true,
-  "/blog": true,
+
   "/gallery": true,
 };
 
@@ -200,7 +200,7 @@ const sameAs: SameAsConfig = {
   discord: "https://discord.com/invite/5EyAQ4eNdS",
 };
 
-// social sharing configuration for blog posts
+// social sharing configuration for projects
 const socialSharing: SocialSharingConfig = {
   display: true,
   platforms: {

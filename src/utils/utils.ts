@@ -54,11 +54,19 @@ function readMDXFile(filePath: string) {
   return { metadata, content };
 }
 
+function formatSlug(slug: string) {
+  return slug
+    .replace(/\s+/g, "-")
+    .replace(/[^a-zA-Z0-9-]/g, "")
+    .toLowerCase();
+}
+
 function getMDXData(dir: string) {
   const mdxFiles = getMDXFiles(dir);
   return mdxFiles.map((file) => {
     const { metadata, content } = readMDXFile(path.join(dir, file));
-    const slug = path.basename(file, path.extname(file));
+    const rawSlug = path.basename(file, path.extname(file));
+    const slug = formatSlug(rawSlug);
 
     return {
       metadata,
